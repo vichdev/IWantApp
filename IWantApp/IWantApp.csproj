@@ -24,4 +24,8 @@
     <None Include="C:\Users\Victor Hugo\source\repos\IWantApp\IWantApp\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
