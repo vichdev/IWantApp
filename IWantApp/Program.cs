@@ -1,5 +1,5 @@
 using IWantApp.Endpoints.Categories;
-using IWantApp.Infra;
+using IWantApp.Infra.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

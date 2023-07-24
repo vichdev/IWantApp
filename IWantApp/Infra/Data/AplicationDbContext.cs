@@ -1,4 +1,4 @@
-﻿namespace IWantApp.Infra;
+﻿namespace IWantApp.Infra.Data;
 
 using IWantApp.Domain.Products;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +9,8 @@ public class AplicationDbContext : DbContext
 
     public AplicationDbContext(DbContextOptions<AplicationDbContext> options) : base(options) { }
 
-    protected override void OnModelCreating(ModelBuilder builder) {
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
 
         builder.Entity<Product>().Property(product => product.Name).IsRequired();
 
@@ -18,7 +19,8 @@ public class AplicationDbContext : DbContext
         builder.Entity<Category>().Property(category => category.Name).IsRequired();
 
     }
-    protected override void ConfigureConventions(ModelConfigurationBuilder configuration) {
+    protected override void ConfigureConventions(ModelConfigurationBuilder configuration)
+    {
 
         configuration.Properties<string>().HaveMaxLength(100);
 

@@ -1,5 +1,5 @@
 ﻿using IWantApp.Domain.Products;
-using IWantApp.Infra;
+using IWantApp.Infra.Data;
 
 namespace IWantApp.Endpoints.Categories;
 
