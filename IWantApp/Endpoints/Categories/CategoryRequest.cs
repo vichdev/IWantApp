@@ -2,6 +2,4 @@
 
 namespace IWantApp.Endpoints.Categories;
 
-public class CategoryRequest : Category
-{
-}
+public record CategoryRequest(string Name, bool Active);
