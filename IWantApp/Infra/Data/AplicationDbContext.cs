@@ -2,10 +2,11 @@
 
 using Flunt.Notifications;
 using IWantApp.Domain.Products;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
-public class AplicationDbContext : DbContext
+public class AplicationDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<Product> Products { get; set; }
     public DbSet<Category> Categories { get; set; }
@@ -14,6 +15,7 @@ public class AplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        base.OnModelCreating(builder);
 
         builder.Ignore<Notification>();
 

@@ -14,6 +14,7 @@ public class CategoryPut
     {
         var category = context.Categories.Where(category => category.Id == id).FirstOrDefault();
         if (category != null)
+
         {
 
         category.Name = categoryRequest.Name;
